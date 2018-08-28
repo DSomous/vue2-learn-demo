@@ -1,5 +1,5 @@
 // Setup API address
-var root = 'http://cnodejs.org/api/v1'
+var root = 'https://cnodejs.org/api/v1'
 // require axios
 var axios = require('axios')
 // Judge the type of object.
