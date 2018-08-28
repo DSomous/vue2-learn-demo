@@ -1,6 +1,7 @@
 # vue2-demo
 
-> A Vue.js cli project
+> A Vue.js cli project.
+> Follow with 前端panda from 博客园, the website address is https://www.cnblogs.com/zhaowy/p/8513070.html
 
 ## Build Setup
 
