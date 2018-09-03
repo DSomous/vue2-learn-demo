@@ -1,5 +1,5 @@
 // Setup API address
-var root = 'https://cnodejs.org/api/v1'
+var root = '/api/v1'
 // require axios
 var axios = require('axios')
 // Judge the type of object.
@@ -57,7 +57,7 @@ function apiAxios (method, url, params, success, failure) {
   }).catch(function (err) {
     let res = err.response
     if (res) {
-      window.alert('api error, HTTP CODE is' + res.status)
+      window.alert('api error, HTTP CODE is: ' + res.status + ', ERROR TEXT is: ' + res.statusText)
     }
   })
 }
