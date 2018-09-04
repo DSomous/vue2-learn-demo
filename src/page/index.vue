@@ -3,8 +3,8 @@
     <Header></Header>
     <div class="article_list">
       <ul>
-        <li v-for="i in list" :key="i.id">
-          <time v-text="i.create_at"></time>
+        <li v-for="i in list.slice(0, 30)" :key="i.id">
+          <time>Created at {{$utils.moment(i.create_at).fromNow()}}</time>
           <router-link :to="'/content/' + i.id">
             {{ i.title }}
           </router-link>

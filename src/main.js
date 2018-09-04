@@ -5,8 +5,10 @@ import App from './App'
 import router from './router'
 
 import api from './api/index.js'
+import utils from './utils/index.js'
 // Register api as Vue prototype.
 Vue.prototype.$api = api
+Vue.prototype.$utils = utils
 
 Vue.config.productionTip = false
 
