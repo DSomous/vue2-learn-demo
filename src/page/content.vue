@@ -2,12 +2,12 @@
   <div>
     <Header></Header>
     <h2 v-text="data.title"></h2>
-    <p>作者：{{data.author.loginname}}, 发表于：{{$utils.formatTime({time: data.create_at, format: 'YYYY-MM-DD h:mm A'})}} </p>
+    <p v-if="data.length>0">作者：{{data.author.loginname}}, 发表于：{{$utils.formatTime({time: data.create_at, format: 'YYYY-MM-DD h:mm A'})}} </p>
     <hr>
     <article v-html="data.content"></article>
     <h3>网友回复：</h3>
     <ul>
-      <li v-for="i in data.replies.slice(0, 30) " :key="i.id">
+      <li v-if="data.length>0" v-for="i in data.replies" :key="i.id">
         <p>评论者：{{i.author.loginname}}, 评论于：{{$utils.formatTime({time: i.create_at, format: 'YYYY-MM-DD h:mm A'})}}</p>
         <article v-html="i.content"></article>
       </li>
@@ -15,6 +15,7 @@
     <Footer></Footer>
   </div>
 </template>
+
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
